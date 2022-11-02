@@ -1,0 +1,78 @@
+@import "../../common/include-media";
+
+.preloader {
+  position: fixed;
+  height: 100%;
+  z-index: 1000;
+}
+
+.preloader_top {
+  background-color: #000;
+  position: fixed;
+  height: 50vh;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.preloader_bottom {
+  background-color: #000;
+  position: fixed;
+  height: 50vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.line {
+  width: 100%;
+  height: 1.5px;
+  margin-top: 50vh;
+  transform: translateY(-50%);
+  position: fixed;
+  display: inline-block;
+  background-color: rgb(255, 255, 255);
+}
+
+.banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  @include media(">mobile") {
+    padding: 4vh 4vw;
+  }
+  @include media("<=mobile") {
+    padding: 1.7rem 1.5rem;
+  }
+}
+
+.adriane {
+  color: #fff;
+  font: 7.5vh/98.49% "BauerBodoniStd-Bold", serif;
+  letter-spacing: 0.07em;
+
+  @include media(">mobile") {
+    padding-bottom: 1vh;
+  }
+  @include media("<=mobile") {
+    font-size: 3.25rem;
+  }
+}
+
+.fleuriste {
+  color: #e9e9e9;
+  font: 3.5vh/150% "BauerBodoniStd-Roman", Arial, Helvetica, sans-serif;
+  letter-spacing: 0.25em;
+  white-space: pre-wrap;
+
+  @include media("<=mobile") {
+    font-size: 1.7rem;
+  }
+}
